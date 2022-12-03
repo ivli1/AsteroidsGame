@@ -1,8 +1,10 @@
-Spaceship vvv = new Spaceship();
+Spaceship vvv;
 Star[] str = new Star[200];
-ArrayList <Asteroid> Pop = new ArrayList <Asteroid>();
+ArrayList <Asteroid> Pop;
 public void setup(){
   size(500,500);
+  vvv = new Spaceship(); 
+  Pop = new ArrayList <Asteroid>();
   background(#000000);
   for(int i = 0; i < str.length; i++){
     str[i] = new Star();
@@ -20,20 +22,21 @@ public void draw(){
     Pop.get(i).move();
     Pop.get(i).show();
     float d = dist((float)vvv.getX(), (float)vvv.getY(), (float)Pop.get(i).getCenterX(), (float)Pop.get(i).getCenterY());
-    if(d < 50){
+    System.out.println(d);
+    if(d < 30){
       Pop.remove(i);
       i--;
-    }
-    vvv.show();
-    vvv.move();
+    } 
   }
+   vvv.show();
+   vvv.move();
 }
 public void keyTyped(){
   if(key == 'w'){
-    vvv.accelerate(0.05);
+    vvv.accelerate(0.1);
   }
   if(key == 's'){
-    vvv.accelerate(-0.05);
+    vvv.accelerate(-0.1);
   }
   if(key == 'a'){
     vvv.turn(-5);
