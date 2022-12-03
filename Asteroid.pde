@@ -1,7 +1,5 @@
 class Asteroid extends Floater{
   public double rot;
-  public double myCenterX;
-  public double myCenterY;
   public Asteroid(){
     corners = 8;
     xCorners = new int[]{-20,-10,0,10,20,10,0,-10,-20};
