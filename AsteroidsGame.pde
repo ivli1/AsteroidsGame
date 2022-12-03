@@ -22,7 +22,6 @@ public void draw(){
     Pop.get(i).move();
     Pop.get(i).show();
     float d = dist((float)vvv.getX(), (float)vvv.getY(), (float)Pop.get(i).getCenterX(), (float)Pop.get(i).getCenterY());
-    System.out.println(d);
     if(d < 30){
       Pop.remove(i);
       i--;
