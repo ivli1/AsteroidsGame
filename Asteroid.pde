@@ -5,8 +5,8 @@ class Asteroid extends Floater{
     xCorners = new int[]{-20,-10,0,10,20,10,0,-10,-20};
     yCorners = new int[]{0,-15,-20,-15,0,15,20,15,0};
     myColor = #cccccc;
-    myCenterX = 110;
-    myCenterY = 110;
+    myCenterX = 0;
+    myCenterY = 0;
     myXspeed = (int)(Math.random()*4+1);
     myYspeed = (int)(Math.random()*4+1);
     myPointDirection = 0;
